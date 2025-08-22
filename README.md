@@ -100,30 +100,36 @@ This project has two main folders: `backend` and `frontend`.
 
 ### 2. Backend Setup
 
-```bash
-cd backend
+1. **Open your terminal/command prompt.**
 
-# Install dependencies
-npm install
+2. **Navigate to your project’s backend folder:**
+   ```bash
+   cd path/to/your/store-rating-platform/backend
+   ```
+   (Replace `path/to/your` with the actual path on your computer.)
 
-# Configure environment
-cp .env.example .env
-# Edit .env to match your MySQL credentials and set a JWT secret
+3. **Now run each backend setup command from _inside_ the `backend` folder, for example:**
+   ```bash
+   # Install dependencies
+   npm install
 
-# Create database in MySQL
-# Login to mysql and run:
-# CREATE DATABASE store_ratings_db;
+   # Copy and edit env file
+   cp .env.example .env
+   # Then open .env in a text editor and fill in your DB credentials and JWT secret
 
-# Run migrations
-npx sequelize-cli db:migrate
+   # Create the database in MySQL (do this in a MySQL client, not in terminal)
+   # Example, in MySQL:
+   # CREATE DATABASE store_ratings_db;
 
-# Seed the database (creates default admin)
-npx sequelize-cli db:seed:all
+   # Run migrations (in terminal, still in backend/)
+   npx sequelize-cli db:migrate
 
-# Start the backend server
-npm run dev
-```
+   # Seed the database (in terminal)
+   npx sequelize-cli db:seed:all
 
+   # Start the backend server
+   npm run dev
+   ```
 - Backend API runs at http://localhost:5000/api
 - Swagger docs: http://localhost:5000/api-docs
 
@@ -136,21 +142,26 @@ npm run dev
 
 ### 3. Frontend Setup
 
-```bash
-cd frontend
+1. **Open a new terminal window/tab.**
 
-# Install dependencies
-npm install
+2. **Navigate to your project’s frontend folder:**
+   ```bash
+   cd path/to/your/store-rating-platform/frontend
+   ```
+   (Replace `path/to/your` with the actual path on your computer.)
 
-# Configure environment (set correct API URL)
-cp .env.example .env
-# VITE_API_URL should be http://localhost:5000/api
+3. **Now run each frontend setup command from _inside_ the `frontend` folder, for example:**
+   ```bash
+   # Install dependencies
+   npm install
 
-# Start the frontend
-npm run dev
-```
+   # Copy and edit env file
+   cp .env.example .env
+   # Open .env and set VITE_API_URL to http://localhost:5000/api
 
-- Frontend runs at http://localhost:5173
+   # Start the frontend
+   npm run dev
+   ```
 
 ---
 
