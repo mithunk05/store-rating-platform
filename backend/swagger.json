@@ -1,0 +1,25 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Store Ratings Platform API",
+    "version": "1.0.0",
+    "description": "API documentation for Store Ratings Platform"
+  },
+  "paths": {
+    "/api/users/register": {
+      "post": {
+        "summary": "Register a normal user",
+        "requestBody": { "required": true, "content": { "application/json": {} } },
+        "responses": { "201": { "description": "User created" } }
+      }
+    },
+    "/api/users/login": {
+      "post": {
+        "summary": "Login for any user",
+        "requestBody": { "required": true, "content": { "application/json": {} } },
+        "responses": { "200": { "description": "JWT and user info" } }
+      }
+    }
+    // ... add more endpoints as needed for full coverage
+  }
+}
