@@ -149,5 +149,3 @@ This project has two main folders: `backend` and `frontend`.
 MIT
 
 ---
-
-**If you have further questions or want to customize the design/UI/UX, just ask!**
